@@ -16,7 +16,7 @@ else {
 const voluum_clickid = urlParameters['voluum_clickid'];
 if (voluum_clickid) {
     addEventListener('registrationBtn', 'click', (e) => onRegistrationBtnClick(e.target, voluum_clickid));
-    addEventListener('depositeBtn', 'click', (e) => onDepositeBtnClick(e.target, voluum_clickid));
+    addEventListener('depositBtn', 'click', (e) => onDepositBtnClick(e.target, voluum_clickid));
     document.getElementById('actions').classList.remove('hide');
 }
 
@@ -37,12 +37,12 @@ function onRegistrationBtnClick(button, clickid) {
         .catch(() => button.innerHTML = button.innerHTML + '(Fail!)');
 }
 
-function onDepositeBtnClick(button, clickid) {
+function onDepositBtnClick(button, clickid) {
     button.disabled = true;
 
-    const depositeAmount = document.getElementById('depositeAmount').value;
+    const depositAmount = document.getElementById('depositAmount').value;
 
-    fetch(getPostbackUrl(clickid, 'dep', depositeAmount), { mode: 'no-cors' })
+    fetch(getPostbackUrl(clickid, 'dep', depositAmount), { mode: 'no-cors' })
         .then(() => button.innerHTML = button.innerHTML + '(Success!)')
         .catch(() => button.innerHTML = button.innerHTML + '(Fail!)');
 }

@@ -71,11 +71,11 @@ a:hover {
     width: 100%;
 }
 
-#firstDeposite {
+#firstDeposit {
     display: flex;
 }
 
-#depositeBtn {
+#depositBtn {
    width: 100%;
    margin-right: 10PX;
 }
