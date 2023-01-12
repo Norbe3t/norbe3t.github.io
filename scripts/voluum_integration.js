@@ -32,8 +32,9 @@ function getUrlParameters(searchParams) {
 
 function onRegistrationBtnClick(button, clickid) {
     button.disabled = true;
-    fetch(getPostbackUrl(clickid, 'regsuccess'))
-        .then(response => handleResponse(response, button));
+    fetch(getPostbackUrl(clickid, 'regsuccess'), { mode: 'no-cors' })
+        .then(() => button.innerHTML = button.innerHTML + '(Success!)')
+        .catch(() => button.innerHTML = button.innerHTML + '(Fail!)');
 }
 
 function onDepositeBtnClick(button, clickid) {
@@ -41,8 +42,9 @@ function onDepositeBtnClick(button, clickid) {
 
     const depositeAmount = document.getElementById('depositeAmount').value;
 
-    fetch(getPostbackUrl(clickid, 'dep', depositeAmount))
-        .then(response => handleResponse(response, button));
+    fetch(getPostbackUrl(clickid, 'dep', depositeAmount), { mode: 'no-cors' })
+        .then(() => button.innerHTML = button.innerHTML + '(Success!)')
+        .catch(() => button.innerHTML = button.innerHTML + '(Fail!)');
 }
 
 function addEventListener(id, event, listener) {
@@ -61,14 +63,4 @@ function getPostbackUrl(clickid, conversionEvent, param1) {
         url += `&param1=${param1}`;
 
     return url;
-}
-
-function handleResponse(response, button) {
-    if (response.ok) {
-        button.innerHTML = button.innerHTML + '(Success!)';
-    }
-    else {
-        button.innerHTML = button.innerHTML + '(Fail!)';
-        button.disabled = false;
-    }
 }
