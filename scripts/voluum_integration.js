@@ -53,7 +53,7 @@ function getPostbackUrl(clickid, conversionEvent, param1) {
     if (!clickid)
         throw new Error(`"clickid" cannot be ${clickid}`);
 
-    let url = `http://dialling-abutory.com/postback?cid=${clickid}`;
+    let url = `https://dialling-abutory.com/postback?cid=${clickid}`;
     if (conversionEvent)
         url += `&et=${conversionEvent}`;
 
