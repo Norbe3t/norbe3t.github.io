@@ -9,6 +9,37 @@ body {
     overflow: hidden;
 }
 
+div {
+    margin-bottom: 20px;
+}
+
+button, input{
+    background-color: transparent;
+    border: 1px solid yellow;
+    color: yellow;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button {
+    padding: 25px 50px;
+}
+
+button:disabled {
+    color: grey;
+}
+
+input {
+    padding: 25px 0px;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 a {
     text-decoration: none;
     color: yellow;
@@ -26,8 +57,25 @@ a:hover {
     text-decoration: underline;
 }
 
+.hide {
+    display: none;
+}
+
 #info {
     font-size: 30px;
     border: 1px solid yellow;
     padding: 50px 100px;
+}
+
+#registrationBtn {
+    width: 100%;
+}
+
+#firstDeposite {
+    display: flex;
+}
+
+#depositeBtn {
+   width: 100%;
+   margin-right: 10PX;
 }
