@@ -66,7 +66,7 @@ fakeEndBtn.onclick = async function() {
     successModal.hide();
     endModal1.show();
 
-    await sleep(8000);
+    await sleep(6000);
 
     endModal1.hide();
     endModal2.show();
@@ -83,19 +83,7 @@ fakeEndBtn.onclick = async function() {
 }
 
 endBtn.onclick = function() {
-    startVideo();
-}
-
-function startVideo() {
-    video.hidden = false;
-    if (video.requestFullscreen) {
-        video.requestFullscreen();
-    } else if (video.webkitRequestFullscreen) { /* Safari */
-        video.webkitRequestFullscreen();
-    } else if (video.msRequestFullscreen) { /* IE11 */
-        video.msRequestFullscreen();
-    }
-    video.play();
+    window.open('https://youtu.be/ZtC2TdMUc40', '_blank');
 }
 
 function sleep(ms) {
