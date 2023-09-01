@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Романтична вечеря ❤️</title>
+
+    <meta name="viewport" content="width=device-width">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <link rel="icon" href="images/favicon.svg" />
+
+    <style>
+        body {
+            background-color: #c5b3e6;
+        }
+
+        input, .letter {
+            width: 50px;
+            margin: 2px;
+            height: 56px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex align-items-center justify-content-center vh-100" style="min-height: 800px;">
+        <div class="text-center">
+          <div id="main" class="d-none">
+            <div class="d-flex justify-content-center mb-4">
+              <div class="form-floating mb-3">
+                  <input id="letter1" type="text" class="form-control letter text-center border border-2 border-danger-subtle rounded-4" id="letter1_floatingInput" placeholder="5">
+                  <label class="w-100 text-center" for="letter1_floatingInput">5</label>
+              </div>
+            </div>
+  
+            <div class="d-flex justify-content-center mb-4">
+                <div class="form-floating mb-3">
+                    <input id="letter2" type="text" class="form-control letter text-center border border-2 border-danger-subtle rounded-4" id="letter2_floatingInput" placeholder="1">
+                    <label class="w-100 text-center" for="letter2_floatingInput">1</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input id="letter3" type="text" class="form-control letter text-center border border-2 border-danger-subtle rounded-4" id="letter3_floatingInput" placeholder="3">
+                    <label class="w-100 text-center" for="letter3_floatingInput">3</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input id="letter4" type="text" class="form-control letter text-center border border-2 border-danger-subtle rounded-4" id="letter4_floatingInput" placeholder="9">
+                    <label class="w-100 text-center" for="letter4_floatingInput">9</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input id="letter5" type="text" class="form-control letter text-center border border-2 border-danger-subtle rounded-4" id="letter5_floatingInput" placeholder="2">
+                    <label class="w-100 text-center" for="letter5_floatingInput">2</label>
+                </div>
+            </div>
+  
+            <div class="d-flex justify-content-center mb-4">
+                <div class="form-floating mb-3">
+                    <input id="letter6" type="text" class="form-control letter text-center border border-2 border-danger-subtle rounded-4" id="letter6_floatingInput" placeholder="6">
+                    <label class="w-100 text-center" for="letter6_floatingInput">6</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input id="letter7" type="text" class="form-control letter text-center border border-2 border-danger-subtle rounded-4" id="letter7_floatingInput" placeholder="8">
+                    <label class="w-100 text-center" for="letter7_floatingInput">8</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input id="letter8" type="text" class="form-control letter text-center border border-2 border-danger-subtle rounded-4" id="letter8_floatingInput" placeholder="4">
+                    <label class="w-100 text-center" for="letter8_floatingInput">4</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input id="letter9" type="text" class="form-control letter text-center border border-2 border-danger-subtle rounded-4" id="letter9_floatingInput" placeholder="10">
+                    <label class="w-100 text-center" for="letter9_floatingInput">10</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input id="letter10" type="text" class="form-control letter text-center border border-2 border-danger-subtle rounded-4" id="letter10_floatingInput" placeholder="7">
+                    <label class="w-100 text-center" for="letter10_floatingInput">7</label>
+                </div>
+            </div>
+          
+            <span class="fs-3">!</span>
+  
+            <div class="mt-4">
+              <button id="checkBtn" class="btn btn-outline-light">Перевірити 🗸</button>
+            </div>
+
+            <div class="mt-4">
+                <video id="video" class="vw-100" controls="controls" hidden>
+                  <source src="videos/end_video.mp4" type="video/mp4" />
+                </video>
+            </div>
+
+          </div>
+            <div class="mt-4">
+              <button id="startBtn" class="btn btn-outline-light">Почати 🚀</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="startModal" class="modal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Невеличкий квест ❤️‍🔥</h5>
+          </div>
+          <div class="modal-body">
+            <p>Привіт, надіюсь тобі подобається наш вечір🕯️🍽️🌹</p>
+            <p>У мене для тебе є міні-квест, він не складний 🙃</p>
+            <p>Сподіваюсь, ми не забули з собою взяти ті конвертики, які ти отримувала ці дні, бо вони нам будуть в нагоді 😅</p>
+            <p></p>
+            <p>Тебе напевно давно цікавить, для чого ж ті зелені циферки під підкресленими літерами, зараз все розповім 🤓</p>
+            <p></p>
+            <p>Перед тобою зараз будуть комірки, куди потрібно вставити відповідні до цифер літери, так ти утвориш вираз, який мені ніколи не набридне казати 🥰</p>
+            <p>Коли всі комірки будуть заповнені, потрібно натиснути на кнопку "Перевірити 🗸" і якщо все вірно... Думаю там ти вже розберешся😘</p>
+            <p></p>
+            <p>Жмакай на "Почати ▶️"! Не гай час🤩</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Почати ▶️</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="successModal" class="modal fade" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Невеличкий квест 💓</h5>
+            </div>
+            <div class="modal-body">
+              <p>Ю-ху-ху, схоже, ти підібрала всі літери правильно 🥳🤩</p>
+              <p>Те, що я тебе кохаю, напевно, для тебе вже давно не таємниця 😝</p>
+              <p>Але я не перестану повторювати ці слова, тому що мені хочеться, щоб наші почуття один до одного тільки сильнішали 👩‍❤️‍💋‍👨</p>
+              <p></p>
+              <p>Що ж, цей міні-квест підходить до завершення, навідміну від моїх почуттів до тебе ❤️</p>
+              <p></p>
+              <p>Натисни на кнопочку "Завершити 🔚", щоб завершити цю маленьку пригоду 😊</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="fakeEndBtn" class="btn btn-outline-info">Завершити 🔚</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="failModal" class="modal fade" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Невеличкий квест 🫶</h5>
+            </div>
+            <div class="modal-body">
+              <p>Схоже щось не так, можливо деякі літери не на своїх місцях🤨</p>
+              <p>Переконайся що всі літери знаходяться у відповідності до цифер і спробуй ще раз😉</p>
+              <p></p>
+              <p>Головне щоб цей горе програміст нічого сам не поламав був😅</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Ще разочок 🥰</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="endModal1" class="modal fade" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <p>Вітаю, ти завершила міні-квест, сподіваюсь він зміг підняти тобі настрій, кохаю тебе 💖</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="endModal2" class="modal fade" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <p>Хоча стривай!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="endModal3" class="modal fade" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body text-center ">
+              <p>Таке відчуття ніби я щось забув, в мене це часто буває 😅</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="endModal" class="modal fade" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <p>Навушники!!!!</p>
+              <p>Точно!</p>
+              <p>Не даремно ж я їх попросив тебе взяти 😅</p>
+              <p></p>
+              <p>Тому в мене до тебе буде зараз 3 прохання 🥰</p>
+              <p>1. Одягнути навушники 🎧</p>
+              <p>2. Перевести телефон в горизонтальне положення 🔄📱</p>
+              <p>3. Завершити квест 😌</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="endBtn" class="btn btn-outline-info" data-bs-dismiss="modal">Завершити 💥</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
